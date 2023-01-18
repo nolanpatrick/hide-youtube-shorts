@@ -2,11 +2,13 @@
 // @name     HideShorts
 // @version  1
 // @grant    none
-// @match    https://*.youtube.com/
+// @match    https://*.youtube.com/*
 // ==/UserScript==
 
 // by Nolan Adams
 // January 2023
+
+console.log('Running HideShorts')
 
 function hide_shorts() {
   // Find all links
@@ -20,7 +22,7 @@ function hide_shorts() {
     // Hide links (and supporting elements) if link contains 'shorts/'
     if (shorts_links[i].href.includes('shorts/'))
     {
-      //console.log('Hiding shorts video'); 
+      console.log('Hiding shorts video'); 
       shorts_links[i].hidden = true;
       shorts_links[i].parentElement.hidden = true;
       shorts_links[i].parentElement.parentElement.hidden = true;
@@ -43,6 +45,7 @@ function hide_shorts() {
     // If span content is 'Shorts', hide entire shelf
     if (shelves[i].textContent == 'Shorts')
     {
+      console.log('Hiding shelf')
       shelves[i].hidden = true;
       shelves[i].parentElement.hidden = true;
       shelves[i].parentElement.parentElement.hidden = true;
