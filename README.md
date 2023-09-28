@@ -1,4 +1,4 @@
-# HideShorts
+# Hide Youtube Shorts
 
 A simple Greasemonkey script that hides YouTube Shorts from appearing in the homepage and subscription feed. Also hides the 'Shorts' button on the sidebar.
 
